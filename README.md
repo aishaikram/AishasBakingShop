@@ -11,4 +11,4 @@ Dependency Injection pattern
 Repository pattern
 razor in views
 Bootstrap (v5.x) for styling
-EntityFramework (for data connectivity) 
+EntityFramework Core (v 4)  (for data connectivity) 
