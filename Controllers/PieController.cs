@@ -30,5 +30,13 @@ namespace AishasBakingShop.Controllers
             pieListViewModel.CurrentCategory = "Fruit Pies";
             return View(pieListViewModel);
         }
+        public IActionResult Details(int id)
+        {
+            var pie = _pieRepository.GetPieById(id);
+            if (pie==null)
+                  return NotFound(); //sends 404 Not found to client
+            return View(pie);
+        }
+
     }
 }
