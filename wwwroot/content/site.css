@@ -62,7 +62,7 @@ footer {
 
 .navbar-inverse {
     /*background-color: #a593c2;*/ 
-    background-color: #f8a4d8;
+    background-color:dimgray;
     border-color: #a593c2;
 }
 
@@ -77,10 +77,15 @@ footer {
     color: white;
 }
 
-.carousel .item {
-    height: 400px;
+.carousel-item {
+    height: 28rem;
+    max-width:100vw;
 }
-
+.carousel-caption
+{
+    bottom:3rem;
+    z-index:10;
+}
 .item img {
     position: absolute;
     top: 0;
@@ -97,10 +102,10 @@ footer {
     background-color: #fcaeae !important;
     border-color: #fba1a1 !important;
 }
-a {
-    color:lightseagreen;
-}
 
+a {
+    color: lightseagreen;
+}
 .navbar-brand {
-    color: black;
+    color: white;
 }
