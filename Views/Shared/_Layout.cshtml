@@ -12,22 +12,13 @@
 </head>
 <body>
     <!--https://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
-    <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg" >
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Aisha's Bakery</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#ai-navbar-collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="ai-navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
 
-                        <li class="nav-item"><a asp-controller="Pie" asp-action="List">Pies</a></li>
-                    </ul>
-                </div>
-            </div>
+        <nav>
+            <ul class="nav navbar-inverse">
+                <li class="nav-item"><a class=" nav-link active" asp-controller="Home" asp-action="Index">Week Speciality</a></li>
+                <li class="nav-item"><a class=" nav-link active" asp-controller="Pie" asp-action="List">Our Cakes and Pies</a></li>
+
+            </ul>
         </nav>
         <h1>Welcome to Aisha's Baking Shop!</h1>
 
