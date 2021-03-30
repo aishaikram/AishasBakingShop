@@ -32,6 +32,12 @@ namespace AishasBakingShop
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+          
+            //creates a scoped instance of shopping cart through the static method of GetCart. It's coped because everytime a user makes a request, the shopping cart instance is created/retrieved through GetCart and through out that same request, this instance remains alive and associated with all operations in the request
+
+            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            services.AddHttpContextAccessor();
+            services.AddSession();
 
             /* If using Mock Repos, use this code instead
             services.AddScoped<IPieRepository, MockPieRepository>();
@@ -53,6 +59,7 @@ namespace AishasBakingShop
             app.UseHttpsRedirection();
             // ai added- looks nfor wwwroot folder 
             app.UseStaticFiles();
+            app.UseSession(); //for shopping cart
 
             app.UseRouting();
 
