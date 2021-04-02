@@ -9,15 +9,17 @@
     <script src="~/lib/jquery/jquery.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.js"></script>
     <link href="~/Content/site.css" rel="stylesheet" />
+
 </head>
 <body>
     <!--https://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
 
         <nav>
             <ul class="nav navbar-inverse">
-                <li class="navbar-brand">Aisha's Bakery</li>
+                <li class="navbar-brand "><span class="fas fa-apple">Aisha's Bakery</span> </li>
                 <li class="nav-item"><a class=" nav-link active" asp-controller="Home" asp-action="Index">Week Speciality</a></li>
                 <li class="nav-item"><a class=" nav-link active" asp-controller="Pie" asp-action="List">Our Cakes and Pies</a></li>
+                @await Component.InvokeAsync("ShoppingCartSummary") 
 
             </ul>
         </nav>

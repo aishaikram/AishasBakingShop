@@ -11,6 +11,17 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+footer {
+    margin: 50px 0;
+}
+
+.caption {
+    height: 100px;
+    overflow: hidden;
+}
+.caption h4 {
+     white-space: nowrap;
+ }
 
 .slide-image {
     width: 100%;
@@ -25,44 +36,43 @@ body {
     border-radius: 4px;
 }
 
-.caption {
-    height: 110px;
-    overflow: hidden;
+.carousel-item {
+    height: 28rem;
+    max-width: 100vw;
 }
 
-    .caption h4 {
-        white-space: nowrap;
-    }
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
 
 .thumbnail img {
     width: 100%;
 }
 
-.addToCart {
-    padding-right: 10px;
-    padding-left: 10px;
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
 }
 
 .thumbnail {
     padding: 0;
 }
 
-    .thumbnail .caption-full {
-        padding: 9px;
-        color: #333;
-    }
-
-footer {
-    margin: 50px 0;
+a {
+    color: lightseagreen;
 }
-
 .navbar {
     background-image: none;
 }
 
+.navbar-brand {
+    color: white;
+}
+
 .navbar-inverse {
-    /*background-color: #a593c2;*/ 
-    background-color:dimgray;
+    /*background-color: #a593c2;*/
+    background-color: dimgray;
     border-color: #a593c2;
 }
 
@@ -77,14 +87,13 @@ footer {
     color: white;
 }
 
-.carousel-item {
-    height: 28rem;
-    max-width:100vw;
+.addToCart {
+    padding-right: 10px;
+    padding-left: 10px;
 }
-.carousel-caption
-{
-    bottom:3rem;
-    z-index:10;
+
+cart-status {
+    color: lightseagreen;
 }
 .item img {
     position: absolute;
@@ -103,9 +112,4 @@ footer {
     border-color: #fba1a1 !important;
 }
 
-a {
-    color: lightseagreen;
-}
-.navbar-brand {
-    color: white;
-}
+
