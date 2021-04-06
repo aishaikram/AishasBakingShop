@@ -27,7 +27,8 @@ namespace AishasBakingShop.Controllers
             var shoppingCartViewModel = new ShoppingCartViewModel
             {
                 ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+                ShoppingCartTotalAmount = _shoppingCart.GetShoppingCartTotalAmount(),
+                ShoppingCartTotalPrice = _shoppingCart.GetShoppingCartTotalPrice()
             };
 
             return View(shoppingCartViewModel);

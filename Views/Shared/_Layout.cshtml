@@ -6,8 +6,11 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
     <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    
     <script src="~/lib/jquery/jquery.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/font-awesome/js/all.js" data-auto-replace-svg="nest"></script>
+
     <link href="~/Content/site.css" rel="stylesheet" />
 
 </head>
@@ -16,7 +19,7 @@
 
         <nav>
             <ul class="nav navbar-inverse">
-                <li class="navbar-brand "><span class="fas fa-apple">Aisha's Bakery</span> </li>
+                <span style="font-size: 1.5em; color:hotpink;margin-left:1em;"><i class="fas fa-birthday-cake"></i></span><li class="navbar-brand" style="margin-left:0.5em;">Aisha's Bakery</li>
                 <li class="nav-item"><a class=" nav-link active" asp-controller="Home" asp-action="Index">Week Speciality</a></li>
                 <li class="nav-item"><a class=" nav-link active" asp-controller="Pie" asp-action="List">Our Cakes and Pies</a></li>
                 @await Component.InvokeAsync("ShoppingCartSummary") 

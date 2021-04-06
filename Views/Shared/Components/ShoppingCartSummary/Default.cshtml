@@ -6,8 +6,10 @@
 {
     <li>
         <a>
-            <span class="glyphicon glyphicon-shopping-cart"></span>
-            <span id="cart-status">@Model.ShoppingCart.ShoppingCartItems.Count</span>
+            <span style="font-size: 1.5em; color: Tomato;">
+                <i class="fas fa-shopping-basket"></i>
+            </span>
+            <span id="cart-status">@Model.ShoppingCartTotalAmount</span>
         </a>
     </li>
 }
