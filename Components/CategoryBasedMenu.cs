@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace AishasBakingShop.Components
 {
-    public class CategoryMenu : ViewComponent
+    public class CategoryBasedMenu : ViewComponent
     {
         private readonly ICategoryRepository _categoryRepository;
-        public CategoryMenu(ICategoryRepository categoryRepository)
+        public CategoryBasedMenu(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
         }
