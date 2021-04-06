@@ -10,5 +10,5 @@ MVC pattern
 Dependency Injection pattern
 Repository pattern
 razor in views
-Bootstrap (v5.x) for styling
+Bootstrap (v4.x) for styling
 EntityFramework Core (v4, updated to v5.0.4)  (for data connectivity) 
