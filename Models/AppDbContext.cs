@@ -16,7 +16,8 @@ namespace AishasBakingShop.Models
         //DBSet refers to the Pies table in the database specified in Options (in ConfigureServices
         public DbSet<Pie> Pies { get; set; }
         public DbSet<Category> Categories { get; set; }
-
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         //AI- seeding sample data into the Db if it doesnt already have some data
