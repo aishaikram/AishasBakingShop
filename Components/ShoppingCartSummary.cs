@@ -1,12 +1,12 @@
-﻿using AishasBakingShop.Models;
-using AishasBakingShop.ViewModels;
+﻿using TheBakingCentre.Models;
+using TheBakingCentre.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AishasBakingShop.Components
+namespace TheBakingCentre.Components
 {
     public class ShoppingCartSummary : ViewComponent
 

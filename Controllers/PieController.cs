@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AishasBakingShop.Models;
-using AishasBakingShop.ViewModels;
+using TheBakingCentre.Models;
+using TheBakingCentre.ViewModels;
 
-namespace AishasBakingShop.Controllers
+namespace TheBakingCentre.Controllers
 {
     public class PieController : Controller
     {

@@ -1,11 +1,11 @@
-﻿using AishasBakingShop.Models;
+﻿using TheBakingCentre.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AishasBakingShop.Components
+namespace TheBakingCentre.Components
 {
     public class CategoryBasedMenu : ViewComponent
     {

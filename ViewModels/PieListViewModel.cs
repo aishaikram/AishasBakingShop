@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AishasBakingShop.Models;
+using TheBakingCentre.Models;
 
-namespace AishasBakingShop.ViewModels
+namespace TheBakingCentre.ViewModels
 {
     public class PieListViewModel
     {

@@ -4,12 +4,13 @@
 @model ShoppingCartViewModel
 @if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
 {
-    <li class="nav-item">
-        <a>
-            <span style="font-size: 1.5em; color: Tomato; margin-left:1.5em;">
-                <i class="fas fa-shopping-basket"></i>
-            </span>
-            <span id="cart-status" style="color:lightseagreen;">@Model.ShoppingCartTotalAmount</span>
-        </a>
-    </li>
+<li class="nav-item">
+
+    <span style="font-size: 1.5em; color: Tomato; margin-left:1.5em;">
+        <i class="fas fa-shopping-basket"></i>
+    </span>
+    <a asp-controller="ShoppingCart" asp-action="Index">
+        <span id="cart-status" style="color:lightseagreen;">@Model.ShoppingCartTotalAmount</span>
+    </a>
+</li>
 }

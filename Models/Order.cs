@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.ComponentModel.DataAnnotations;
 
-namespace AishasBakingShop.Models
+namespace TheBakingCentre.Models
 {
     public class Order
     {

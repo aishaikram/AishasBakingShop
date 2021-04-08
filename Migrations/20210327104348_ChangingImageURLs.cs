@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AishasBakingShop.Migrations
+namespace TheBakingCentre.Migrations
 {
     public partial class ChangingImageURLs : Migration
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AishasBakingShop.Models
+namespace TheBakingCentre.Models
 {
     // A cllas to connect to the underlying data source class/data context/EF Core class
     public class PieRepository :IPieRepository

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AishasBakingShop.Models
+namespace TheBakingCentre.Models
 {
     //each shopping cart item is added as a OrderDetail Item associated with Order Object
     public class OrderDetail

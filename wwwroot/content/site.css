@@ -11,9 +11,12 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-footer {
-    margin: 50px 0;
-}
+    body > footer {
+        margin: 50px 0;
+        font-size: x-small;
+        color: lightseagreen;
+        text-align: center;
+    }
 
 .caption {
     height: 100px;

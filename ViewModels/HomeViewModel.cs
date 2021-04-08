@@ -1,10 +1,10 @@
-﻿using AishasBakingShop.Models;
+﻿using TheBakingCentre.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AishasBakingShop.ViewModels
+namespace TheBakingCentre.ViewModels
 {
     public class HomeViewModel
     {

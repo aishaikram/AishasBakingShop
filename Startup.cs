@@ -7,11 +7,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AishasBakingShop.Models;
+using TheBakingCentre.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
 
-namespace AishasBakingShop
+namespace TheBakingCentre
 {
     public class Startup
     {
@@ -30,6 +31,11 @@ namespace AishasBakingShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //adds basic authentication into the system and specifies that EFCore store is used for storing Identity infomation using the corresponding dbcontext class
+
+            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
+
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
@@ -42,6 +48,10 @@ namespace AishasBakingShop
 
             //added support for MVC
             services.AddControllersWithViews();
+
+            //added for identity razor pages
+            services.AddRazorPages();
+
             //make changes in UI and webpage is updated without re-running app
             services.AddRazorPages().AddRazorRuntimeCompilation();
         }
@@ -60,11 +70,16 @@ namespace AishasBakingShop
             app.UseSession(); //for shopping cart
 
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             { 
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}" );
                 
+                //identity pages
+                endpoints.MapRazorPages();
+
                 /*endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Hello World!");

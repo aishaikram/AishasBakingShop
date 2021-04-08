@@ -9,7 +9,7 @@
 
     <script src="~/lib/jquery/jquery.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.js"></script>
-    
+
     <!--referring font-awesome packages from cdn-->
     <script src="https://kit.fontawesome.com/1597dd8424.js" crossorigin="anonymous"></script>
 
@@ -18,61 +18,55 @@
 </head>
 <body>
     <!--https://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
-   @*
-        <nav>
-          
-                    <ul class="nav navbar-inverse ">
-                        <span style="font-size: 1.5em; color:hotpink;margin-left:1em;"><i class="fas fa-birthday-cake"></i></span>
-                        <li class="navbar-brand" style="margin-left:0.5em;">Aisha's Bakery</li>
-                        <li class="nav-item"><a class=" nav-link active" asp-controller="Home" asp-action="Index">Week Speciality</a></li>
-                        <li class="nav-item"><a class=" nav-link active" asp-controller="Pie" asp-action="List">-Pies</a></li> -->
-                       @await Component.InvokeAsync("CategoryBasedMenu")
-                        @await Component.InvokeAsync("ShoppingCartSummary")
 
-                    </ul>
-      
-        </nav>
-    *@
     <nav class="navbar navbar-expand-lg navbar-inverse">
-  <div class="container-fluid">
-      <a class="navbar-brand"  href="#">
-          <span style="font-size: 1em; color:hotpink;"><i class="fas fa-birthday-cake"></i></span>    <span style="margin-left: 0.5em;"> Aisha's Bakery</span>
-      </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Weekly Special</a>
-            </li>
+        <div class="container-fluid">
+            <a class="navbar-brand" aria-current="page" asp-controller="Home" asp-action="Index">
+                <span style="font-size: 1em; color:hotpink;"><i class="fas fa-birthday-cake"></i></span>    <span style="margin-left: 0.5em;"> The Baking Centre</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Weekly Special</a>
+                    </li>
 
-            <li class="nav-item dropdown">
-                @await Component.InvokeAsync("CategoryBasedMenu")
-            </li>
+                    <li class="nav-item dropdown">
+                        @await Component.InvokeAsync("CategoryBasedMenu")
+                    </li>
 
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" asp-controller="Contact" asp-action="Index">Contact</a>
-            </li>
-            @await Component.InvokeAsync("ShoppingCartSummary")
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" asp-controller="Contact" asp-action="Index">Contact</a>
+                    </li>
+                    @await Component.InvokeAsync("ShoppingCartSummary")
+                </ul>
+                <partial name="_LoginPartial" />
 
-        </ul>
-     
-    </div>
-  </div>
-</nav>
 
-        <div class="row">
-            <div class="col-md-3">
-                <p class="lead">
-                    <img class="img-responsive" alt="Aisha's Baking Shop'" src="~/Images/cakeshoplogo.png" />
-                </p>
-            </div>
 
-            <div class="col-md-9">
-                @RenderBody()
+
             </div>
         </div>
-   
+    </nav>
+
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">
+                <img class="img-responsive" alt="The Baking Centre" src="~/Images/cakeshoplogo.png" />
+            </p>
+        </div>
+
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+
+    <footer>
+        Copyright 2021 - This website is designed and developed by <email address="codeworld@gmail.com" content="Aisha Ikram">Aisha Ikram</email>
+    </footer>
 </body>
+
 </html>
