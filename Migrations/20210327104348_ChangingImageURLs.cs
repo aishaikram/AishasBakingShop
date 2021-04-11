@@ -21,7 +21,7 @@ namespace TheBakingCentre.Migrations
                 keyColumn: "PieId",
                 keyValue: 2,
                 columns: new[] { "ImageThumbnailUrl", "ImageUrl" },
-                values: new object[] { "https://gillcleerenpluralsight.blob.core.windows.net/files/blueberrycheesecakesmall.jpg", "https://gillcleerenpluralsight.blob.core.windows.net/files/blueberrycheesecake.jpg" });
+                values: new object[] { "/images/blueberrycheesecakesmall.jpg", "/images/blueberrycheesecake.jpg" });
         }
     }
 }

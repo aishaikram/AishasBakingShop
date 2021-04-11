@@ -90,7 +90,7 @@ namespace TheBakingCentre.Migrations
                 keyColumn: "PieId",
                 keyValue: 10,
                 column: "ImageUrl",
-                value: "https://gillcleerenpluralsight.blob.core.windows.net/files/strawberrypie.jpg");
+                value: "/images/strawberrypie.jpg");
         }
     }
 }
