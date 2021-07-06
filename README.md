@@ -14,3 +14,5 @@ Bootstrap (v4.x) for styling
 EntityFramework Core (v4, updated to v5.0.4)  (for data connectivity) 
 
 This is just a startup template and can be re-used if required, however the system will be extended further to make it more professional and by adding more features and hosting it onto Azure Cloud using AZURE SQL and Storage as well as App Services
+
+This is Azure Devops branch
